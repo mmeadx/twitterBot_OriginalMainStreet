@@ -1,6 +1,9 @@
 # The Original Main Street Twitter Bot
 
 
+![Twitter Explainer](./assets/explaination.png)
+
+
 Adapted from the Udemy course on Creating a [Twitter Bot](https://www.udemy.com/share/101I4E2@FG5gfWJKcFQMcE5GBXpzRD5HY1diSnA=/), this bot has a few functionalities that include:
 
 1. Likes and Responds to users who Tweet using both **@OrigMainStreet** and the tag **#OriginalMainStreet**

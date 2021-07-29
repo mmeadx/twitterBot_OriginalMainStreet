@@ -33,9 +33,10 @@ def store_last_seen(FILE_NAME, last_seen_id):
     file_write.close()
     return
 
+
 # Hashtag to search for (must be commonly used)
 hashtag = "SinclairLewis"
-tweetNumber = 3
+tweetNumber = 2
 
 # This uses Tweepy to search using the api and then find that many Tweets
 reTweets = tweepy.Cursor(api.search, hashtag).items(tweetNumber)
@@ -51,6 +52,13 @@ def searchbot():
             print(e.reason)
             time.sleep(2)
 
+def joke():
+    url = "https://icanhazdadjoke.com"
+
+    response = requests.get(url, headers={"Accept": "application/json"})
+
+    return (response.json()["joke"])
+
 def reply():
     # This brings in all tweets with mention and reads the FILE_NAME for last tweet
     tweets = api.mentions_timeline(read_last_seen(FILE_NAME), tweet_mode='extended')
@@ -63,8 +71,16 @@ def reply():
             api.create_favorite(tweet.id)
             api.retweet(tweet.id)
             store_last_seen(FILE_NAME, tweet.id)
+        elif '#tellmeajoke' in tweet.full_text.lower():
+            print("Joke given to ID: " + str(tweet.id))
+            api.update_status("@" + tweet.user.screen_name + " " + joke() + " \U0001F923 \U0001F923", tweet.id)
+            api.create_favorite(tweet.id)
+            store_last_seen(FILE_NAME, tweet.id)
+
 
 while True:
     reply()
     searchbot()
-    time.sleep(600)
+    time.sleep(300)
+    print("Working --- 5 more minutes...")
+    time.sleep(300)

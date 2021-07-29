@@ -18,19 +18,17 @@ _This is the Bot's full functionality - the user Tweeted **@OrigMainStreet** wit
 ![Full Functionality - Twitter Bot](./assets/fullFunctionality.png)
 
 
-_To activate the bot's functionality - a user must Tweet @OrigMainStreet and use the #OriginalMainStreet tag_
 
-![Tweet at Original Main Street](./assets/twitterBotTweet.png)
-
-
-_It also will retweet anyone who recently used the #SinclairLewis tag -- here's the code running in the PythonAnywhere console_
+_Here's the code running in the PythonAnywhere console_
 
 ![Python Anywhere - Twitter Bot Retweet](./assets/twitterBotConsole.png)
 ![Python Anywhere - Twitter Bot Retweet](./assets/jokeInConsole.png)
 
 
-_This is the Bot in working order - The user who just Tweeted using **#SinclairLewis** was Retweeted and the user who used **@OrigMainStreet** and the **#OriginalMainStreet** and **#SinclairLewis** tag was Liked, commented back to, and Retweeted._
+
+
+_The user who just Tweeted using **#SinclairLewis** was Retweeted and the user who used **@OrigMainStreet** and the **#OriginalMainStreet** and **#SinclairLewis** tag was Liked, commented back to, and Retweeted._
 
 ![Twitter Bot Results](./assets/twitterBotResults.png)
 
-_
+
